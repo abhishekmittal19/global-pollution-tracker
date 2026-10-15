@@ -3,44 +3,54 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-forest-primary: #1A5B47;
-    --color-forest-dark: #0D3328;
-    --color-bg-sand: #FDFCF9;
-  }
-
   body {
-    background-color: #FDFCF9;
-    color: #172033;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    background-color: #061c14;
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
-  }
-
-  /* Accessible focus indicators */
-  *:focus-visible {
-    outline: 2px solid #23735B;
-    outline-offset: 2px;
+    overflow-x: hidden;
   }
 }
 
-/* Custom scrollbars for data tables and panels */
+/* Background Atmosphere (plana.earth forest gradient) */
+.forest-hero-bg {
+  background: radial-gradient(circle at 50% 65%, #0f462e 0%, #08261b 45%, #051a12 85%, #03110b 100%);
+}
+
+.forest-card {
+  background: rgba(11, 46, 32, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.forest-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.forest-card-hover:hover {
+  border-color: rgba(52, 211, 153, 0.3);
+  background: rgba(14, 56, 39, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Custom scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F2EFE7;
+  background: #04150e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C7E2D7;
-  border-radius: 3px;
+  background: #0f462e;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ECCC0;
+  background: #166542;
 }
 
 /* Scientific tabular numbers */
@@ -49,12 +59,23 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* Chart tooltip styles */
+/* Recharts Custom Tooltip for Plan A Forest Style */
 .recharts-default-tooltip {
-  border-radius: 6px !important;
-  border: 1px solid #E7E2D5 !important;
-  box-shadow: 0 4px 12px -2px rgba(13, 51, 40, 0.08) !important;
-  font-size: 12px !important;
-  padding: 8px 12px !important;
-  background-color: #FFFFFF !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(52, 211, 153, 0.25) !important;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.6) !important;
+  font-size: 13px !important;
+  padding: 10px 14px !important;
+  background-color: #07251a !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.recharts-tooltip-label {
+  color: #86efac !important;
+  font-weight: 700 !important;
+  margin-bottom: 6px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding-bottom: 4px !important;
+  font-size: 13px !important;
 }
