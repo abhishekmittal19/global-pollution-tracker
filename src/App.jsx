@@ -3,7 +3,7 @@ import CO2EmissionsDashboard from './components/CO2EmissionsDashboard';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0b1320] text-slate-100 selection:bg-teal-500/30 selection:text-teal-200">
+    <div className="min-h-screen bg-[#f8fafc] text-[#1e293b] selection:bg-[#D9EFAB] selection:text-[#0c2340]">
       <CO2EmissionsDashboard />
     </div>
   );

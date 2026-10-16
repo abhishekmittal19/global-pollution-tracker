@@ -4,53 +4,52 @@
 
 @layer base {
   body {
-    background-color: #061c14;
-    color: #ffffff;
-    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: 'Lato', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', 'Lora', Georgia, serif;
+    letter-spacing: -0.015em;
+    color: #0c2340;
   }
 }
 
-/* Background Atmosphere (plana.earth forest gradient) */
-.forest-hero-bg {
-  background: radial-gradient(circle at 50% 65%, #0f462e 0%, #08261b 45%, #051a12 85%, #03110b 100%);
+/* OWID Signature Chart Frame */
+.owid-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.forest-card {
-  background: rgba(11, 46, 32, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-.forest-card-hover {
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.forest-card-hover:hover {
-  border-color: rgba(52, 211, 153, 0.3);
-  background: rgba(14, 56, 39, 0.6);
-  transform: translateY(-2px);
+.owid-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
 }
 
 /* Custom scrollbars */
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #04150e;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0f462e;
-  border-radius: 4px;
+  background: #cbd5e1;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #166542;
+  background: #94a3b8;
 }
 
 /* Scientific tabular numbers */
@@ -59,23 +58,24 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* Recharts Custom Tooltip for Plan A Forest Style */
+/* Recharts Custom Tooltip for OWID Academic Card */
 .recharts-default-tooltip {
-  border-radius: 12px !important;
-  border: 1px solid rgba(52, 211, 153, 0.25) !important;
-  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.6) !important;
-  font-size: 13px !important;
+  border-radius: 8px !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.12) !important;
+  font-size: 12px !important;
   padding: 10px 14px !important;
-  background-color: #07251a !important;
-  color: #ffffff !important;
-  backdrop-filter: blur(12px) !important;
+  background-color: #ffffff !important;
+  color: #0c2340 !important;
+  font-family: 'JetBrains Mono', monospace !important;
 }
 
 .recharts-tooltip-label {
-  color: #86efac !important;
+  color: #0c2340 !important;
   font-weight: 700 !important;
-  margin-bottom: 6px !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  margin-bottom: 4px !important;
+  border-bottom: 1px solid #e2e8f0 !important;
   padding-bottom: 4px !important;
+  font-family: 'Playfair Display', serif !important;
   font-size: 13px !important;
 }
